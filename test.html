@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./assets/css/threejs.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="rc">
+      <div class="dom-element">WHEN<br />WILL<br />WE<br />MEET?<br /></div>
+      <div id="canvas-container"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
+
+    <script>
+      window.onload = function(){
+        redraw();
+      }
+      function redraw() {
+        const container = document.getElementById("canvas-container");
+        const domElement = document.querySelector(".dom-element");
+        // Initialize scene, camera, and renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(46, domElement.offsetWidth / domElement.offsetHeight, 0.1, 50);
+        camera.position.z = 5;
+        const renderer = new THREE.WebGLRenderer({
+          antialias: true,
+          alpha: true
+        });
+        renderer.setSize(domElement.offsetWidth, domElement.offsetHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        container.innerHTML = "";
+        container.appendChild(renderer.domElement);
+        //hide the dom element here
+        // domElement.style.left = "-100%"
+        // Shader uniforms
+        const uniforms = {
+          uTexture: {
+            value: null
+          },
+          uMouse: {
+            value: new THREE.Vector2(0, 0)
+          },
+        };
+        // Shader material with vertex and fragment shaders
+        const material = new THREE.ShaderMaterial({
+          uniforms,
+          vertexShader: document.getElementById("vertexShader").textContent,
+          fragmentShader: document.getElementById("fragmentShader").textContent,
+          transparent: true
+        });
+        const geometry = new THREE.PlaneGeometry(5, 3, 256, 256);
+        const plane = new THREE.Mesh(geometry, material);
+        scene.add(plane);
+        // Capture .dom-element as a texture
+        const updateTexture = async () => {
+          try {
+            const canvas = await html2canvas(domElement, {
+              backgroundColor: null
+            });
+            const texture = new THREE.CanvasTexture(canvas);
+            uniforms.uTexture.value = texture;
+          } catch (error) {
+            console.error("Error capturing .dom-element:", error);
+          }
+        };
+        // Initial texture load
+        updateTexture();
+        // Mouse interpolation (lerping) for smooth movement
+        const mouseLerped = {
+          x: 0,
+          y: 0
+        };
+        container.addEventListener("mousemove", (event) => {
+          const rect = container.getBoundingClientRect();
+          const mouseX = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+          const mouseY = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+          mouseLerped.x = THREE.MathUtils.lerp(mouseLerped.x, mouseX, 0.1);
+          mouseLerped.y = THREE.MathUtils.lerp(mouseLerped.y, mouseY, 0.1);
+          uniforms.uMouse.value.set(mouseLerped.x, mouseLerped.y);
+        });
+
+        function animate() {
+          renderer.render(scene, camera);
+          requestAnimationFrame(animate);
+        }
+        //FOR MOBILE
+        // Initialize mouse values
+        function animateHoverEffect() {
+          // Create an oscillating effect for the "hover"
+          const time = performance.now() * 0.001; // Time in seconds
+          const oscillationX = Math.sin(time) * 0.5; // Oscillates between -0.5 and 0.5
+          const oscillationY = Math.cos(time) * 0.5; // Oscillates between -0.5 and 0.5
+          // Smoothly interpolate towards the oscillation values
+          mouseLerped.x = THREE.MathUtils.lerp(mouseLerped.x, oscillationX, 0.1);
+          mouseLerped.y = THREE.MathUtils.lerp(mouseLerped.y, oscillationY, 0.1);
+          // Update the shader uniform
+          uniforms.uMouse.value.set(mouseLerped.x, mouseLerped.y);
+          // Continue the animation loop
+          requestAnimationFrame(animateHoverEffect);
+        }
+
+        // Start the animation only if window.width is mobile width
+        if(window.innerWidth > 900){
+          animate();
+        }else{
+          animate();
+          animateHoverEffect();
+        }
+
+
+
+      };
+      window.addEventListener("resize", redraw);
+    </script>
+
+    <script id="vertexShader" type="x-shader/x-vertex">
+      uniform float time;
+          uniform vec2 uMouse;
+          varying vec2 vUv;
+
+          float circle(vec2 uv, vec2 circlePosition, float radius) {
+              float dist = distance(circlePosition, uv);
+              return 1.0 - smoothstep(0.0, radius, dist);
+          }
+
+          float elevation(float radius, float intensity) {
+              float circleShape = circle(uv, (uMouse * 0.5) + 0.5, radius);
+              return circleShape * intensity;
+          }
+
+          void main() {
+              vec3 newPosition = position;
+              newPosition.z += elevation(0.2, 0.7);
+
+              gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
+              vUv = uv;
+          }
+    </script>
+
+    <script id="fragmentShader" type="x-shader/x-fragment">
+      uniform sampler2D uTexture;
+          uniform vec2 uMouse;
+          varying vec2 vUv;
+
+          void main() {
+              vec4 finalTexture = texture2D(uTexture, vUv);
+              gl_FragColor = finalTexture;
+          }
+    </script>
+  </body>
+</html>
+

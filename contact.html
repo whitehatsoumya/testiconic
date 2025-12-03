@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+    content="Get in touch with Iconic Creative Agency for innovative solutions and expert guidance. We're here to help you elevate your brand and achieve your goals!" />
+   
+    <!-- OG Tags for Contact Page -->
+<meta property="og:title" content="Contact Us – Iconic Creative Agency" />
+<meta property="og:description" content="Let’s collaborate. Reach out to Iconic Creative Agency to discuss your project or schedule a consultation." />
+<meta property="og:image" content="https://iconiccreativeagency.be/img/FlyerMockup.png" />
+<meta property="og:url" content="https://iconiccreativeagency.be/contact" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Iconic Creative Agency" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-Iconic-creative-website-design-agency-32x32.png"
+    />
+    <!------------------ CSS Links------------------>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/slider.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="./assets/css/threejs.css" />
+    <link rel="canonical" href="https://iconiccreativeagency.be/contact.html" />
+
+
+    <title>Iconic Creative Agency - Contact </title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-16731360064"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16731360064');
+    </script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Iconic Creative Agency",
+    "url": "https://iconiccreativeagency.be/contact.html",
+    "logo": "https://iconiccreativeagency.be/assets/images/svg/iconic-svg.svg",
+    "image": "https://iconiccreativeagency.be/assets/images/svg/iconic-svg.svg",
+    "description": "Iconic Creative Agency is a 24/7 marketing and website business based in Knokke-Heist, Belgium.",
+    "telephone": "+32 470 96 85 70",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nestor De Tierestraat 21",
+      "addressLocality": "Knokke-Heist",
+      "postalCode": "8300",
+      "addressCountry": "BE"
+    },
+    "openingHours": "Mo-Su 00:00-23:59",
+    "sameAs": [
+      "https://www.instagram.com/iconic_creative_agency/",
+      "https://www.facebook.com/profile.php?id=61566079929288"
+    ],
+    "priceRange": "€€",
+    "founder": "Iconic Creative Agency",
+    "foundingLocation": "Knokke-Heist",
+    "foundingDate": "2024",
+    "areaServed": "BE",
+    "department": {
+      "@type": "Organization",
+      "name": "Marketing & Website Services"
+    }
+  }
+  </script>
+    <style>
+
+      body {
+        margin: 0;
+        /* overflow: hidden; */
+        --color-text: #fff;
+        --color-gr-1: #4cfa68;
+        --color-gr-2: #1b35ea;
+        --color-bg: #272f2e;
+        --color-link: #6d91c9;
+        --color-link-hover: #60c18d;
+        --padding-ver: 1.5rem;
+        --padding-hor: 1.5rem;
+        --color-bg-overlay: #000;
+        --color-back: #6d91c9;
+        --color-back-hover: #60c18d;
+
+        /* background-color: var(--color-bg); */
+
+      }
+
+      .demo-2 {
+        --color-text: #000;
+        --color-gr-1: #81e2c6;
+        --color-gr-2: #e7613c;
+        --color-bg: #f9f9f9;
+        --color-link: #d23636;
+        --color-link-hover: #df6b47;
+        --color-back: #d23636;
+        --color-back-hover: #df6b47;
+        --color-bg-overlay: rgb(37, 116, 66);
+      }
+
+      .overlay {
+        grid-area: 1 / 1 / -1 / -1;
+        display: grid;
+        position: relative;
+        z-index: 1000;
+        pointer-events: none;
+        opacity: 0;
+        --columns: 20;
+        grid-template-columns: repeat(var(--columns), 1fr);
+      }
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+        opacity: 0; /* Initially hidden */
+        pointer-events: none; /* Prevent clicks on the overlay when it's hidden */
+        z-index: 9999; /* Make sure it's on top of all other content */
+      }
+
+      .overlay div {
+        background: var(--color-bg-overlay);
+      }
+
+      /* CSS for intro and overlay transitions */
+      .intro {
+        display: block; /* Ensure intro is displayed correctly */
+      }
+
+      .intro--closed {
+        display: none;
+      }
+
+      @media screen and (min-width: 53em) {
+        .intro__image {
+          min-width: 200px;
+          max-width: 30%;
+        }
+        .content {
+          padding-top: 5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="loader">
+      <div class="logo">
+        <div class="d-flex gap-3 align-items-center">
+          <svg
+            width="39"
+            height="44"
+            viewBox="0 0 39 44"
+            fill=""
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M38.1342 10.9779L33.3678 13.7299L28.6013 16.482L23.8335 19.2327L19.0671 21.9848V32.9887L19.0627 32.9916L19.0671 32.9931V38.4929L19.0642 38.4958L19.0671 38.4973V44L14.3007 41.2479V35.7452L14.3108 35.7394L14.3065 35.7379L14.3007 35.7336V30.241L14.3108 30.2352L14.3007 30.2294V19.2327L19.0671 16.482L23.8335 13.7299L28.6013 10.9779L33.3678 8.22577L38.1342 10.9779Z"
+              fill="#fff"
+            />
+            <path
+              d="M23.8277 2.75209L19.0613 5.50417L14.2934 8.25481L9.53282 11.004V10.9996L9.52701 10.9967V11.0098L4.77658 13.7532L4.76641 13.7474V13.7561L4.76351 13.7575L4.76641 13.759V19.2559L4.75334 19.2486V19.2632L4.7606 19.2603L4.76641 19.2632V24.7557L4.75334 24.7485V24.763L4.7606 24.7601L4.76641 24.763V30.2555L4.75334 30.2483V30.2628L4.7606 30.2584L4.76641 30.2628V35.7553L4.75334 35.7481V35.7553L0 33.012V11.0069L4.76351 8.25626L4.76641 8.25771V8.2519L4.76932 8.249L9.52701 5.50417L14.2934 2.75209L19.0613 0L23.8277 2.75209Z"
+              fill="#fff"
+            />
+            <path
+              d="M23.8277 2.75208V8.2548L19.0613 11.0069L14.2934 13.759L9.53283 16.5067V16.4994L9.52702 16.4965V16.5111L9.53283 16.5082V33.012L4.76642 35.7626V30.2628L4.77513 30.257L4.77223 30.2555L4.76642 30.2526V24.763L4.77223 24.7601L4.77658 24.7572L4.77949 24.7557L4.77658 24.7542L4.76642 24.7484V19.2631L4.77223 19.2602L4.77658 19.2573L4.77949 19.2559L4.77513 19.2544L4.76642 19.2486V13.759L4.76932 13.7575L4.77223 13.7561L4.77658 13.7532L9.52702 11.0098L9.52993 11.0083L9.53283 11.0098V11.004L14.2934 8.2548L19.0613 5.50416L23.8277 2.75208Z"
+              fill="#fff"
+            />
+            <path
+              d="M38.1342 27.4816L33.3678 30.2337L28.6014 32.9858L23.8335 35.7379V30.2337L28.6014 27.4816L33.3678 24.7296L38.1342 27.4816Z"
+              fill="#fff"
+            />
+            <path
+              d="M23.8335 30.2337L23.8277 30.2381L23.8335 30.241V35.7379L28.6014 32.9858L33.3678 30.2337L38.1342 27.4817V32.9858L33.3678 35.7379L28.6014 38.4885L23.8335 41.2406V41.2479L19.0671 44V38.4973L19.0743 38.4929L19.0671 38.4885V32.9931L19.0729 32.9902L19.0671 32.9858V21.9847L23.8335 19.2327L28.6014 16.482L33.3678 13.7299L38.1342 10.9778V16.482L33.3678 19.2327L28.6014 21.9847L23.8335 24.7368V30.2337Z"
+              fill="#fff"
+            />
+          </svg>
+          <p class="loader-text" href="./index.html">ICONIC CREATIVE AGENCY</p>
+        </div>
+        <div class="wrapper">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent" id="content">
+      <div class="overlay"></div>
+      <!------------------ Navbar Start ------------------>
+
+      <div class="nav-div">
+        <div class=" scroll-container">
+          <div class=" navbar-parent">
+            <div class="d-flex align-items-center">
+              <a class="navbar-brand" href="./index.html">
+                <div class="logo">
+                  <svg
+                    width="39"
+                    height="44"
+                    viewBox="0 0 39 44"
+                    fill=""
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M38.1342 10.9779L33.3678 13.7299L28.6013 16.482L23.8335 19.2327L19.0671 21.9848V32.9887L19.0627 32.9916L19.0671 32.9931V38.4929L19.0642 38.4958L19.0671 38.4973V44L14.3007 41.2479V35.7452L14.3108 35.7394L14.3065 35.7379L14.3007 35.7336V30.241L14.3108 30.2352L14.3007 30.2294V19.2327L19.0671 16.482L23.8335 13.7299L28.6013 10.9779L33.3678 8.22577L38.1342 10.9779Z"
+                      fill="#fff"
+                    />
+                    <path
+                      d="M23.8277 2.75209L19.0613 5.50417L14.2934 8.25481L9.53282 11.004V10.9996L9.52701 10.9967V11.0098L4.77658 13.7532L4.76641 13.7474V13.7561L4.76351 13.7575L4.76641 13.759V19.2559L4.75334 19.2486V19.2632L4.7606 19.2603L4.76641 19.2632V24.7557L4.75334 24.7485V24.763L4.7606 24.7601L4.76641 24.763V30.2555L4.75334 30.2483V30.2628L4.7606 30.2584L4.76641 30.2628V35.7553L4.75334 35.7481V35.7553L0 33.012V11.0069L4.76351 8.25626L4.76641 8.25771V8.2519L4.76932 8.249L9.52701 5.50417L14.2934 2.75209L19.0613 0L23.8277 2.75209Z"
+                      fill="#fff"
+                    />
+                    <path
+                      d="M23.8277 2.75208V8.2548L19.0613 11.0069L14.2934 13.759L9.53283 16.5067V16.4994L9.52702 16.4965V16.5111L9.53283 16.5082V33.012L4.76642 35.7626V30.2628L4.77513 30.257L4.77223 30.2555L4.76642 30.2526V24.763L4.77223 24.7601L4.77658 24.7572L4.77949 24.7557L4.77658 24.7542L4.76642 24.7484V19.2631L4.77223 19.2602L4.77658 19.2573L4.77949 19.2559L4.77513 19.2544L4.76642 19.2486V13.759L4.76932 13.7575L4.77223 13.7561L4.77658 13.7532L9.52702 11.0098L9.52993 11.0083L9.53283 11.0098V11.004L14.2934 8.2548L19.0613 5.50416L23.8277 2.75208Z"
+                      fill="#fff"
+                    />
+                    <path
+                      d="M38.1342 27.4816L33.3678 30.2337L28.6014 32.9858L23.8335 35.7379V30.2337L28.6014 27.4816L33.3678 24.7296L38.1342 27.4816Z"
+                      fill="#fff"
+                    />
+                    <path
+                      d="M23.8335 30.2337L23.8277 30.2381L23.8335 30.241V35.7379L28.6014 32.9858L33.3678 30.2337L38.1342 27.4817V32.9858L33.3678 35.7379L28.6014 38.4885L23.8335 41.2406V41.2479L19.0671 44V38.4973L19.0743 38.4929L19.0671 38.4885V32.9931L19.0729 32.9902L19.0671 32.9858V21.9847L23.8335 19.2327L28.6014 16.482L33.3678 13.7299L38.1342 10.9778V16.482L33.3678 19.2327L28.6014 21.9847L23.8335 24.7368V30.2337Z"
+                      fill="#fff"
+                    />
+                  </svg>
+                </div>
+              </a>
+
+              <div class="left-nav ms-lg-4 ms-md-4 md-sm-2 ms-1">
+                <divx class="scrolling-text-container">
+                  <a class="navitext" href="./index.html">CONTACT ICONIC</a>
+                </divx>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hamburger-parent">
+          <div class="hamburger-menu" id="hamburger-menu">
+            <img
+              src="./assets/images/svg/plus.svg"
+              alt="plus icon"
+              id="plus-icon"
+            />
+          </div>
+        </div>
+        <div class="nav-outside">
+          <nav class="menu" id="menu">
+            <div class="wrapperx">
+              <div class="containerx">
+                <div>
+                  <a class="navitext" href="./index.html">Home</a>
+                </div>
+                <div>
+                  <a class="navitext" href="./services.html">Services</a>
+                </div>
+                <div>
+                  <a class="navitext" href="./about-us.html">About us</a>
+                </div>
+                <div>
+                  <a class="navitext" href="#">Contact</a>
+                </div>
+                <div class="project-div">
+                  <a class="" href="./contact.html">START YOUR PROJECT</a>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="project-btn">
+                      <a class="" href="#">Start your project</a>
+                  </div> -->
+          </nav>
+        </div>
+      </div>
+
+      <!------------------ Navbar END ------------------>
+
+      <div class="contact-page mtc-96">
+        <form action="">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-11 ">
+                <div class="contact-heading">
+                  <div
+                    class="expertice-arrow d-flex justify-content-between align-items-center"
+                  >
+                    <div class="heading-div">
+                      <h1 class="">
+                        AMAZING THINGS START WITH A SIMPLE HELLO.
+                      </h1>
+                    </div>
+                    <div>
+                      <img
+                        class="contact-arrow svg-arrow-size"
+                        src="./assets/images/arrow-down-iconic-creative-website-design-agency.png"
+                        alt="arrow"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 mtc-96">
+                <div class="labels-div">
+                  <h4 class="heading">I am interested in :</h4>
+                  <div class="labels-parent mtc-36">
+                    <label class="label">
+                      <input type="checkbox" name="new_website" />
+                      <img
+                        src="./assets/images/svg/contact-notch.svg"
+                        alt="contact-iconic-creative-website-design-agency"
+                      />
+                      <span>New Website</span>
+                    </label>
+
+                    <label class="label">
+                      <input type="checkbox" name="website_update" />
+                      <img
+                        src="./assets/images/svg/contact-notch.svg"
+                        alt="contact-iconic-creative-website-design-agency"
+                      />
+                      <span>Website Update</span>
+                    </label>
+
+                    <label class="label">
+                      <input type="checkbox" name="coaching" />
+                      <img
+                        src="./assets/images/svg/contact-notch.svg"
+                        alt="contact-iconic-creative-website-design-agency"
+                      />
+                      <span>Coaching</span>
+                    </label>
+
+                    <label class="label">
+                      <input type="checkbox" name="logo" />
+                      <img
+                        src="./assets/images/svg/contact-notch.svg"
+                        alt="contact-iconic-creative-website-design-agency"
+                      />
+                      <span>Logo</span>
+                    </label>
+
+                    <label class="label">
+                      <input type="checkbox" name="strategy" />
+                      <img
+                        src="./assets/images/svg/contact-notch.svg"
+                        alt="contact-iconic-creative-website-design-agency"
+                      />
+                      <span>Strategy</span>
+                    </label>
+
+                    <label class="label">
+                      <input type="checkbox" name="content_creation" />
+                      <img
+                        src="./assets/images/svg/contact-notch.svg"
+                        alt="contact-iconic-creative-website-design-agency"
+                      />
+                      <span>Content Creation</span>
+                    </label>
+
+                    <label class="label">
+                      <input type="checkbox" name="marketing" />
+                      <img
+                        src="./assets/images/svg/contact-notch.svg"
+                        alt="contact-iconic-creative-website-design-agency"
+                      />
+                      <span>Marketing</span>
+                    </label>
+
+                    <label class="label">
+                      <input type="checkbox" name="3d_work" />
+                      <img
+                        src="./assets/images/svg/contact-notch.svg"
+                        alt="contact-iconic-creative-website-design-agency"
+                      />
+                      <span>3D work</span>
+                    </label>
+
+                    <label class="label">
+                      <input type="checkbox" name="other" />
+                      <img
+                        src="./assets/images/svg/contact-notch.svg"
+                        alt="contact-iconic-creative-website-design-agency"
+                      />
+                      <span>Other</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <div class="row mt-5">
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <input
+                      autocomplete="off"
+                      id="first_name1"
+                      name="fname"
+                      type="text"
+                      required
+                    />
+                    <label for="first_name1">First name*</label>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <input
+                      autocomplete="off"
+                      id="last_name"
+                      name="lname"
+                      type="text"
+                      required
+                    />
+                    <label for="last_name">Last name*</label>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <input
+                      autocomplete="off"
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                    />
+                    <label for="email">Email*</label>
+                    <small id="email-error" class="error-message"></small>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <input
+                      autocomplete="off"
+                      id="budget"
+                      name="budget"
+                      type="text"
+                      required
+                    />
+                    <label for="budget">Budget* (€)*</label>
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <input
+                      autocomplete="off"
+                      id="message"
+                      name="message"
+                      type="text"
+                    />
+                    <label for="message">Message</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mtc-36">
+                <div
+                  class="custom-checkbox-container"
+                  id="custom-checkbox-container"
+                >
+                  <input
+                    required
+                    type="checkbox"
+                    id="custom-checkbox"
+                    class="custom-checkbox"
+                  />
+                  <label for="custom-checkbox" class="custom-checkbox-label">
+                    <span class="checkbox-indicator"></span>
+                    <div>
+                      I agree that Iconic will securely hold my data in
+                      accordance with their
+                      <a
+                        class="text-underline"
+                        target="_blank"
+                        href="./privacy.html"
+                        >privacy policy.</a
+                      >
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="contact-btn mtc-56">
+                <button
+                  id="submit-btn"
+                  class="text-uppercase align-items-center d-flex justify-content-center"
+                >
+                  <div class="btn-text-div">
+                    <span>Submit</span>
+                    <svg
+                      class="btn-arrow ms-3"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 11 12"
+                      fill="#00"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 0.999999L10 1L10 11"
+                        stroke="#fff"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.3716 1.33448C10.5564 1.12923 10.5397 0.813082 10.3345 0.628353C10.1292 0.443623 9.81308 0.460262 9.62835 0.665517L10.3716 1.33448ZM0.628353 10.6655L0.293871 11.0372L1.03716 11.7061L1.37165 11.3345L0.628353 10.6655ZM9.62835 0.665517L0.628353 10.6655L1.37165 11.3345L10.3716 1.33448L9.62835 0.665517Z"
+                        fill="#fff"
+                      />
+                    </svg>
+                  </div>
+                  <svg
+                    class="btn-svg"
+                    viewBox="0 0 451 81"
+                    stroke="#000"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0V66.489L14.2957 81H451V14.511L436.704 0L0 0Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Calendly inline widget begin -->
+      <div
+        class="calendly-inline-widget"
+        data-url="https://calendly.com/contact-iconicagency/freediscoverycall?preview_source=et_card&month"
+        style="min-width:320px;height:900px;"
+      ></div>
+      <script
+        type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+        async
+      ></script>
+      <!-- Calendly inline widget end -->
+
+      <div class="service-page-contact">
+        <div class="contact-section ">
+          <!-- <div class="content"></div> -->
+          <div class="contact-bottom-marque">
+            <div class="marquee">
+              <span
+                >ALL COMPANY NAMES, BRAND NAMES, TRADEMARKS, LOGOS,
+                ILLUSTRATIONS, VIDEOS, AND OTHER INTELLECTUAL PROPERTY FEATURED
+                ON THIS WEBSITE ARE OWNED BY THEIR RESPECTIVE OWNERS. ALL
+                COMPANY NAMES, BRAND NAMES, &nbsp;</span
+              >
+              <span
+                >ALL COMPANY NAMES, BRAND NAMES, TRADEMARKS, LOGOS,
+                ILLUSTRATIONS, VIDEOS, AND OTHER INTELLECTUAL PROPERTY FEATURED
+                ON THIS WEBSITE ARE OWNED BY THEIR RESPECTIVE OWNERS. ALL
+                COMPANY NAMES, BRAND NAMES, &nbsp;</span
+              >
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="pt-5 pb-3 pb-md-3  ">
+            <div class="container">
+              <div class="row mx-0 mb-0 mb-md-0">
+                <div class="col-lg-3 px-0">
+                  <div class="brand mb-4 d-flex align-items-center gap-4  ">
+                    <a class="navbar-brand" href="./index.html">
+                      <div class="logo">
+                        <svg
+                          width="60"
+                          height="60"
+                          viewBox="0 0 39 44"
+                          fill=""
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M38.1342 10.9779L33.3678 13.7299L28.6013 16.482L23.8335 19.2327L19.0671 21.9848V32.9887L19.0627 32.9916L19.0671 32.9931V38.4929L19.0642 38.4958L19.0671 38.4973V44L14.3007 41.2479V35.7452L14.3108 35.7394L14.3065 35.7379L14.3007 35.7336V30.241L14.3108 30.2352L14.3007 30.2294V19.2327L19.0671 16.482L23.8335 13.7299L28.6013 10.9779L33.3678 8.22577L38.1342 10.9779Z"
+                            fill="#000"
+                          />
+                          <path
+                            d="M23.8277 2.75209L19.0613 5.50417L14.2934 8.25481L9.53282 11.004V10.9996L9.52701 10.9967V11.0098L4.77658 13.7532L4.76641 13.7474V13.7561L4.76351 13.7575L4.76641 13.759V19.2559L4.75334 19.2486V19.2632L4.7606 19.2603L4.76641 19.2632V24.7557L4.75334 24.7485V24.763L4.7606 24.7601L4.76641 24.763V30.2555L4.75334 30.2483V30.2628L4.7606 30.2584L4.76641 30.2628V35.7553L4.75334 35.7481V35.7553L0 33.012V11.0069L4.76351 8.25626L4.76641 8.25771V8.2519L4.76932 8.249L9.52701 5.50417L14.2934 2.75209L19.0613 0L23.8277 2.75209Z"
+                            fill="#000"
+                          />
+                          <path
+                            d="M23.8277 2.75208V8.2548L19.0613 11.0069L14.2934 13.759L9.53283 16.5067V16.4994L9.52702 16.4965V16.5111L9.53283 16.5082V33.012L4.76642 35.7626V30.2628L4.77513 30.257L4.77223 30.2555L4.76642 30.2526V24.763L4.77223 24.7601L4.77658 24.7572L4.77949 24.7557L4.77658 24.7542L4.76642 24.7484V19.2631L4.77223 19.2602L4.77658 19.2573L4.77949 19.2559L4.77513 19.2544L4.76642 19.2486V13.759L4.76932 13.7575L4.77223 13.7561L4.77658 13.7532L9.52702 11.0098L9.52993 11.0083L9.53283 11.0098V11.004L14.2934 8.2548L19.0613 5.50416L23.8277 2.75208Z"
+                            fill="#000"
+                          />
+                          <path
+                            d="M38.1342 27.4816L33.3678 30.2337L28.6014 32.9858L23.8335 35.7379V30.2337L28.6014 27.4816L33.3678 24.7296L38.1342 27.4816Z"
+                            fill="#000"
+                          />
+                          <path
+                            d="M23.8335 30.2337L23.8277 30.2381L23.8335 30.241V35.7379L28.6014 32.9858L33.3678 30.2337L38.1342 27.4817V32.9858L33.3678 35.7379L28.6014 38.4885L23.8335 41.2406V41.2479L19.0671 44V38.4973L19.0743 38.4929L19.0671 38.4885V32.9931L19.0729 32.9902L19.0671 32.9858V21.9847L23.8335 19.2327L28.6014 16.482L33.3678 13.7299L38.1342 10.9778V16.482L33.3678 19.2327L28.6014 21.9847L23.8335 24.7368V30.2337Z"
+                            fill="#000"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                    <div class="footer-logo-text">
+                      <h6 class=" m-0 p-0">ICONIC</h6>
+                      <span class="">Creative Agency</span>
+                    </div>
+                  </div>
+                  <p class="footer-para ">
+                    We are a team of visionary creators operating at the
+                    intersection of imagination and reality. We are the future
+                    of branding.
+                  </p>
+                </div>
+                <div class="col-lg-9 px-0 mt-lg-0 mt-5">
+                  <div class="row mx-0">
+                    <div
+                      class="px-0 px-md-0 px-lg-3 col-6 col-md-6 col-lg-2 mt-3"
+                    >
+                      <div class="links">
+                        <h5 class=" mb-3 mb-md-3 mb-lg-4  fw-bold">MENU</h5>
+                        <ul class="list-unstyled">
+                          <li class="mb-3">
+                            <a
+                              class=" text-decoration-none "
+                              href="./services.html"
+                              >Services</a
+                            >
+                          </li>
+                          <li class="mb-3">
+                            <a
+                              class=" text-decoration-none "
+                              href="./index.html#expertice"
+                              >Expertise</a
+                            >
+                          </li>
+                          <li class="mb-3">
+                            <a
+                              class=" text-decoration-none "
+                              href="./about-us.html"
+                              >About Us</a
+                            >
+                          </li>
+
+                          <li class="mb-3">
+                            <a
+                              class=" text-decoration-none "
+                              href="./contact.html"
+                              >Contact</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="px-0 px-md-0 px-lg-3 col-6 col-md-6 col-lg-5 mt-3"
+                    >
+                      <div class="links">
+                        <h5 class=" mb-3 mb-md-3 mb-lg-4  fw-bold">CONTACT</h5>
+                        <ul class="list-unstyled">
+                          <li class="mb-3">
+                            <a
+                              class=" text-decoration-none "
+                              href="mailto:contact.iconicagency@gmail.com"
+                              >contact.iconicagency@gmail.com</a
+                            >
+                          </li>
+                          <li class="mb-3">
+                            <a
+                              class=" text-decoration-none "
+                              target="_blank"
+                              href="https://wa.me/32470968570"
+                              >BE +(32) 470 96 85 70</a
+                            >
+                          </li>
+                          <li class="mb-3">
+                            <a
+                              class=" text-decoration-none "
+                              target="_blank"
+                              href="https://www.google.be/maps/place/Knokke,+8300+Knokke-Heist/@51.3467501,3.2842817,16z/data=!3m1!4b1!4m6!3m5!1s0x47c4a65655e2d1f9:0xc4ba042601b67c6d!8m2!3d51.3467441!4d3.2894423!16zL20vMDM5MHhm?hl=nl&entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+                              >8300 Knokke-Heist</a
+                            >
+                          </li>
+                          <li class="mb-3">
+                            <a
+                              class=" text-decoration-none "
+                              target="_blank"
+                              href="https://www.google.be/maps/place/Belgi%C3%AB/@50.5000309,3.8054542,9z/data=!3m1!4b1!4m15!1m8!3m7!1s0x47c4a65655e2d1f9:0xc4ba042601b67c6d!2sKnokke,+8300+Knokke-Heist!3b1!8m2!3d51.3467441!4d3.2894423!16zL20vMDM5MHhm!3m5!1s0x47c17d64edf39797:0x47ebf2b439e60ff2!8m2!3d50.503887!4d4.469936!16zL20vMDE1NGo?hl=nl&entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+                              >Belgium</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="px-0 px-md-0 px-lg-3 col-6 col-md-6 col-lg-2 mt-3"
+                    >
+                      <div class="links">
+                        <h5 class=" mb-3 mb-md-3 mb-lg-4  fw-bold">INFO</h5>
+                        <ul class="list-unstyled">
+                          <li class="mb-3">
+                            <a
+                              class=" text-decoration-none "
+                              href="./cookies.html"
+                              >Cookies</a
+                            >
+                          </li>
+                          <li class="mb-3">
+                            <a
+                              class=" text-decoration-none "
+                              href="./privacy.html"
+                              >Privay Policy</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="px-0 px-md-0 px-lg-3 col-6 col-lg-3 mt-3">
+                      <div class="links faqs social-links">
+                        <h5 class=" mb-3 mb-md-3 mb-lg-4  fw-bold">SOCIALS</h5>
+                        <ul class="list-unstyled">
+                          <li class="mb-3 d-flex gap-lg-4 gap-md-3 ga-2">
+                            <a
+                              class=" text-decoration-none"
+                              target="_blank"
+                              href="https://www.linkedin.com/company/iconic-creative-agency/"
+                              >Linkedin</a
+                            >
+                            <svg
+                              class="svg-arrow"
+                              width="11"
+                              height="12"
+                              viewBox="0 0 11 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M1 0.999999L10 1L10 11"
+                                stroke="#000"
+                                stroke-linecap="square"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M10.3716 1.33448C10.5564 1.12923 10.5397 0.813082 10.3345 0.628353C10.1292 0.443623 9.81308 0.460262 9.62835 0.665517L10.3716 1.33448ZM0.628353 10.6655L0.293871 11.0372L1.03716 11.7061L1.37165 11.3345L0.628353 10.6655ZM9.62835 0.665517L0.628353 10.6655L1.37165 11.3345L10.3716 1.33448L9.62835 0.665517Z"
+                                fill="#000"
+                              />
+                            </svg>
+                          </li>
+                          <li class="mb-3 d-flex gap-lg-4 gap-md-3 ga-2">
+                            <a
+                              class=" text-decoration-none"
+                              target="_blank"
+                              href="https://www.facebook.com/profile.php?id=61566079929288&locale=nl_BE"
+                              >Facebook</a
+                            >
+                            <svg
+                              class="svg-arrow"
+                              width="11"
+                              height="12"
+                              viewBox="0 0 11 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M1 0.999999L10 1L10 11"
+                                stroke="#000"
+                                stroke-linecap="square"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M10.3716 1.33448C10.5564 1.12923 10.5397 0.813082 10.3345 0.628353C10.1292 0.443623 9.81308 0.460262 9.62835 0.665517L10.3716 1.33448ZM0.628353 10.6655L0.293871 11.0372L1.03716 11.7061L1.37165 11.3345L0.628353 10.6655ZM9.62835 0.665517L0.628353 10.6655L1.37165 11.3345L10.3716 1.33448L9.62835 0.665517Z"
+                                fill="#000"
+                              />
+                            </svg>
+                          </li>
+
+                          <li class="mb-3 d-flex gap-lg-4 gap-md-3 ga-2">
+                            <a
+                              class=" text-decoration-none"
+                              target="_blank"
+                              href="https://www.instagram.com/iconic_creative_agency/"
+                              >Instagram</a
+                            >
+                            <svg
+                              class="svg-arrow"
+                              width="11"
+                              height="12"
+                              viewBox="0 0 11 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M1 0.999999L10 1L10 11"
+                                stroke="#000"
+                                stroke-linecap="square"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M10.3716 1.33448C10.5564 1.12923 10.5397 0.813082 10.3345 0.628353C10.1292 0.443623 9.81308 0.460262 9.62835 0.665517L10.3716 1.33448ZM0.628353 10.6655L0.293871 11.0372L1.03716 11.7061L1.37165 11.3345L0.628353 10.6655ZM9.62835 0.665517L0.628353 10.6655L1.37165 11.3345L10.3716 1.33448L9.62835 0.665517Z"
+                                fill="#000"
+                              />
+                            </svg>
+                          </li>
+
+                          <li class="mb-3 d-flex gap-lg-4 gap-md-3 ga-2">
+                            <a
+                              class=" text-decoration-none"
+                              target="_blank"
+                              href="https://wa.me/32470968570"
+                              >Whatsapp</a
+                            >
+                            <svg
+                              class="svg-arrow"
+                              width="11"
+                              height="12"
+                              viewBox="0 0 11 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M1 0.999999L10 1L10 11"
+                                stroke="#000"
+                                stroke-linecap="square"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M10.3716 1.33448C10.5564 1.12923 10.5397 0.813082 10.3345 0.628353C10.1292 0.443623 9.81308 0.460262 9.62835 0.665517L10.3716 1.33448ZM0.628353 10.6655L0.293871 11.0372L1.03716 11.7061L1.37165 11.3345L0.628353 10.6655ZM9.62835 0.665517L0.628353 10.6655L1.37165 11.3345L10.3716 1.33448L9.62835 0.665517Z"
+                                fill="#000"
+                              />
+                            </svg>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <span class="text-center mt-3 copyright-text"
+                  >© Iconic <span id="current-year"></span
+                ></span>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- <div class="custom-cursor-bg"></div> -->
+
+    <!------------------ JS Libray Links----------------->
+    <script src="assets/js/jquery-3.7.1.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Calendly badge widget begin -->
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+    <script type="text/javascript">
+      window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/contact-iconicagency?hide_gdpr_banner=1&primary_color=c6a465', text: 'Schedule a call', color: '#c6a465', textColor: '#ffffff', branding: false }); }
+    </script>
+    <!-- Calendly badge widget end -->
+    <!-- Jquery Touch -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script type="module" src="./js/page-transition/pagetransition.js"></script>
+    <script src="./assets/js/custom.js"></script>
+
+    <script src="./assets/js/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!------------------ JS Libray END----------------->
+
+    <script>
+
+      $('form').on('submit', function (event) {
+          event.preventDefault(); // Prevent form default submission
+
+          let $form = $(this);
+
+          let formData = $form.serialize();
+          let $button = $(".form-btn"); // Target the submit button
+          let $messageField = $("#custom-checkbox-container");
+
+
+          $button.prop('disabled', true).text('Please wait...'); // Disable button and show "Please wait..."
+
+
+          $.ajax({
+              type: 'POST',
+              url: 'phpmailer_/function.php', // URL of the PHP script
+              data: formData,
+              success: function (response) {
+                  // Remove "Please wait..." and show response
+                  $button.prop('disabled', false).text('CONTACT US'); // Enable button and reset text
+                  // $form.append('<span class="response text-white">' + response + '</span>');
+                  $messageField.after('<span class="response text-white">' + response + '</span>');
+
+
+                  // Optionally, reset the form after submission
+                  $form[0].reset();
+              },
+              error: function () {
+                  // Remove "Please wait..." and show error message
+                  $button.prop('disabled', false).text('CONTACT US'); // Enable button and reset text
+
+                  $messageField.after('<p class="response text-danger">There was an error submitting the form, try again!</p>');
+
+                  // $form.append('<span class="response text-danger">There was an error submitting the form, try again!</span>');
+
+                  // Optionally, reset the form even after an error
+                  $form[0].reset();
+              }
+          });
+      });
+    </script>
+  </body>
+</html>
