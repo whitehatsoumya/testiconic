@@ -1,0 +1,187 @@
+:root {
+  --height: 600px;
+  --width: 600px;
+  --size: 130px;
+  --padding: 20px;
+}
+
+@font-face {
+  font-family: "MontserratBold";
+  src: url("../fonts/mostserrat/Montserrat-Bold.ttf") format("truetype");
+}
+@media only screen and (max-width: 2600px) {
+  :root {
+    --height: 800px;
+    --width: 1300px;
+    --size: 120px;
+  }
+  .dom-element {
+    padding-left: 24px;
+    font-family: MontserratBold !important;
+  }
+}
+@media only screen and (max-width: 1900px) {
+  :root {
+    --height: 700px;
+    --width: 1300px;
+    --size: 100px;
+  }
+  .dom-element {
+    padding-left: 24px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  :root {
+    --height: 500px;
+    --width: 1000px;
+    --size: 80px;
+  }
+}
+@media only screen and (max-width: 769px) {
+  :root {
+    --height: 250px;
+    --width: 350px;
+    --size: 60px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  :root {
+    --height: 350px;
+    --width: 500px;
+    --size: 46px;
+  }
+  .dom-element {
+    padding-left: 24px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  :root {
+    --height: 280px;
+    --width: 400p x;
+    --size: 30px;
+  }
+}
+.rc {
+  position: relative;
+  height: var(--height);
+  width: var(--width);
+}
+@media (max-width: 767px) {
+  .rc {
+    display: none;
+  }
+}
+.rc .dom-element {
+  padding: var(--padding);
+  font-weight: bold;
+  font-size: var(--size);
+  height: var(--height);
+  width: var(--width);
+  font-family: var(--family);
+  color: rgb(255, 255, 255) !important;
+  background: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+.rc > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+#canvas-container {
+  background: #000;
+}
+#canvas-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.threejs-video {
+  width: 100%;
+  height: 380px;
+  display: none;
+}
+.threejs-video video {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .threejs-video {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.service-page-contact .marquee span {
+  color: #000000 !important;
+}
+.service-page-contact .contact-section {
+  background-color: rgb(255, 255, 255) !important;
+}
+.service-page-contact .contact-section .marquee {
+  border-top: 1px solid #000000 !important;
+}
+.service-page-contact .contact-section .custom-cursor {
+  top: 85%;
+}
+.service-page-contact #canvas-container {
+  background: #ffffff;
+}
+.service-page-contact #canvas-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+.service-page-contact .dom-element {
+  padding: var(--padding);
+  font-weight: bold;
+  font-size: var(--size);
+  height: var(--height);
+  width: var(--width);
+  font-family: var(--family);
+  color: rgb(0, 0, 0) !important;
+  background: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+.service-page-contact footer {
+  background-color: #fff;
+}
+.service-page-contact footer h5 {
+  color: black !important;
+}
+.service-page-contact footer p {
+  color: rgb(0, 0, 0) !important;
+}
+.service-page-contact footer li a {
+  color: black !important;
+}
+.service-page-contact footer .logo .svg-arrow path {
+  fill: black;
+}
+.service-page-contact footer .footer-logo-text h6,
+.service-page-contact footer .footer-logo-text span {
+  color: black;
+}
+.service-page-contact footer .copyright-text {
+  color: #000;
+}
+.service-page-contact footer li {
+  transition: all 0.2s ease-in-out;
+}
+.service-page-contact footer li svg {
+  transition: all 0.2s ease-in-out;
+}
+.service-page-contact footer li:hover {
+  padding-left: 12px;
+}
+.service-page-contact footer li:hover svg {
+  transform: rotate(45deg);
+}
+.service-page-contact footer li a:hover {
+  color: #c6a66b !important;
+}/*# sourceMappingURL=threejs.css.map */

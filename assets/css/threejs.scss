@@ -1,0 +1,218 @@
+// Default CSS Variables
+:root {
+  --height: 600px;
+  --width: 600px;
+  --size: 130px;
+  --padding: 20px;
+  // --family: "Josefin Sans", sans-serif;
+}
+
+$black: #000;
+@font-face {
+  font-family: "MontserratBold";
+  src: url("../fonts/mostserrat/Montserrat-Bold.ttf") format("truetype");
+}
+
+// Large Desktop (max-width: 2600px)
+@media only screen and (max-width: 2600px) {
+  :root {
+    --height: 800px;
+    --width: 1300px;
+    --size: 120px;
+  }
+  .dom-element {
+    padding-left: 24px;
+    font-family: MontserratBold !important;
+  }
+}
+// Small Desktop (max-width: 1200px)
+@media only screen and (max-width: 1900px) {
+  :root {
+    --height: 700px;
+    --width: 1300px;
+    --size: 100px;
+  }
+
+  .dom-element {
+    padding-left: 24px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  :root {
+    --height: 500px;
+    --width: 1000px;
+    --size: 80px;
+  }
+}
+
+// Tablet (max-width: 768px)
+@media only screen and (max-width: 769px) {
+  :root {
+    --height: 250px;
+    --width: 350px;
+    --size: 60px;
+  }
+}
+
+// Mobile (max-width: 320px)
+@media only screen and (max-width: 576px) {
+  :root {
+    --height: 350px;
+    --width: 500px;
+    --size: 46px;
+  }
+  .dom-element {
+    padding-left: 24px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  :root {
+    --height: 280px;
+    --width: 400p x;
+    --size: 30px;
+  }
+}
+
+.rc {
+  position: relative;
+  // overflow: hidden;
+  height: var(--height);
+  width: var(--width);
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+  .dom-element {
+    padding: var(--padding);
+    font-weight: bold;
+    font-size: var(--size);
+    height: var(--height);
+    width: var(--width);
+    font-family: var(--family);
+    color: rgb(255, 255, 255) !important;
+    background: rgb(0, 0, 0);
+    text-transform: uppercase;
+  }
+
+  & > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+}
+
+#canvas-container {
+  background: #000;
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.threejs-video {
+  width: 100%;
+  height: 380px;
+  display: none;
+
+  video {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.service-page-contact {
+  .marquee span {
+    color: #000000 !important;
+  }
+  .contact-section {
+    background-color: rgb(255, 255, 255) !important;
+    .marquee {
+      border-top: 1px solid #000000 !important;
+    }
+    .custom-cursor {
+      top: 85%;
+    }
+  }
+  #canvas-container {
+    background: #ffffff;
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+  .dom-element {
+    padding: var(--padding);
+    font-weight: bold;
+    font-size: var(--size);
+    height: var(--height);
+    width: var(--width);
+    font-family: var(--family);
+    color: rgb(0, 0, 0) !important;
+    background: rgb(255, 255, 255);
+    text-transform: uppercase;
+  }
+
+  footer {
+    h5 {
+      color: black !important;
+    }
+    background-color: #fff;
+    p {
+      color: rgb(0, 0, 0) !important;
+    }
+    li {
+      a {
+        color: black !important;
+      }
+    }
+
+    .logo {
+      .svg-arrow {
+        path {
+          fill: black;
+        }
+      }
+    }
+    .footer-logo-text {
+      h6,
+      span {
+        color: black;
+      }
+    }
+    .copyright-text {
+      color: #000;
+    }
+    li {
+      transition: all 0.2s ease-in-out;
+
+      svg {
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        padding-left: 12px;
+        svg {
+          transform: rotate(45deg);
+        }
+      }
+
+      a {
+        &:hover {
+          color: #c6a66b !important;
+        }
+      }
+    }
+  }
+}
